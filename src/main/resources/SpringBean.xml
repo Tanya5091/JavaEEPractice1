@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="PersonPresentation">
+        <constructor-arg value="Jason" />
+        <constructor-arg value="Smith" />
+        <property name="age" value="25" />
+    </bean>
+    <bean id="cat" class="Cat">
+    </bean>
+    <bean id="bird" class="Bird">
+    </bean>
+    <bean id="pig" class="Pig">
+    </bean>
+    <bean id = "animals" class="Zoo">
+        <property name="animals">
+            <list>
+                <ref bean="cat"/>
+                <ref bean="bird"/>
+                <ref bean="pig"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
